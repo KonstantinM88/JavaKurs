@@ -14,9 +14,9 @@ public class TransprtApp {
 
         System.out.println("bus.getModel(): " + bus.getModel());
 
-        System.out.println("compacity: " + bus.getCopacity());
+        System.out.println("capacity: " + bus.getCapacity());
 
-        System.out.println("\n================");
+        System.out.println("\n==============");
 
         Train train = new Train("Skoda", 2022, 7, 25);
 
@@ -24,8 +24,18 @@ public class TransprtApp {
         train.start();
         train.stop();
 
-        System.out.println("capacity: " * train.getCapacity());
+        System.out.println("capacity: " + train.getCapacity());
         train.setCountWagons(10);
-        System.out.println("capacity: ");
+        System.out.println("capacity: " + train.getCapacity());
+
+        System.out.println("\n================");
+        Bus bus2 = new Bus("Bus-X2", 2025, 3);
+
+        System.out.println(bus2.takePassenger());
+        System.out.println(bus2.takePassenger());
+        System.out.println(bus2.takePassenger());
+        System.out.println(bus2.takePassenger());
+
+
     }
 }
