@@ -7,6 +7,8 @@ public class ExceptionExample {
 
     public static void main(String[] args) {
 
+
+
         //Ошибки компиляции
  //     int a = "Java";
 
@@ -75,13 +77,15 @@ public class ExceptionExample {
     }
 
     // Ключевое слово throws используется в сигнатуре метода для указания, что метод может выбросить исключения
-    private static String getUrlString2() {
-        URL myUrl = null;
-        try {
-            myUrl = new URL("http://example.com");
-        } catch (MalformedURLException e) {
-            throw new RuntimeException(e);
-        }
+    private static String getUrlString2() throws MalformedURLException {
+        URL myUrl = new URL("htt://exaple.com");
         return myUrl.toString();
+//        URL myUrl = null;
+//        try {
+//            myUrl = new URL("http://example.com");
+//        } catch (MalformedURLException e) {
+//            throw new RuntimeException(e);
+//        }
+//        return myUrl.toString();
     }
 }
